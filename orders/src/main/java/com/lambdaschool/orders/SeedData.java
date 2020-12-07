@@ -558,20 +558,20 @@ public class SeedData
         Set<String> customerNames = new HashSet<>();
         for (int i = 0; i < 100; i++)
         {
-            customerNames.add(dataFaker.name()
-                    .fullName());
+            customerNames.add(dataFaker.gameOfThrones()
+                    .character());
         }
 
         for (String theName : customerNames)
         {
-            String custcity = dataFaker.address()
+            String custcity = dataFaker.gameOfThrones()
                     .city();
-            String tempWorkingarea = dataFaker.address()
-                    .cityName();
-            String tempCustcountry = dataFaker.address()
-                    .country();
-            String tempGrade = dataFaker.country()
-                    .countryCode2();
+            String tempWorkingarea = dataFaker.gameOfThrones()
+                    .house();
+            String tempCustcountry = dataFaker.elderScrolls()
+                    .region();
+            String tempGrade = dataFaker.elderScrolls()
+                    .region();
             double tempOpeningamt = dataFaker.number()
                     .randomDouble(2,
                             0,
@@ -614,8 +614,8 @@ public class SeedData
                         .randomDouble(2,
                                 0,
                                 10000);
-                String tempGetOrderdescription = dataFaker.lorem()
-                        .characters();
+                String tempGetOrderdescription = dataFaker.gameOfThrones()
+                        .quote();
 
                 Order newOrder = new Order(tempGetOrdamount,
                         tempGetAdvanceamount,
