@@ -1,5 +1,8 @@
 package com.lambdaschool.orders.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
@@ -17,6 +20,7 @@ public class Payment
 
     @ManyToMany
     @JoinTable(name = "orderspayments", joinColumns = @JoinColumn(name = "paymentid"), inverseJoinColumns = @JoinColumn(name = "ordnum"))
+    @JsonIgnoreProperties(value = "orders")
     private Set<Order> orders = new HashSet<>();
 
     public Payment()
