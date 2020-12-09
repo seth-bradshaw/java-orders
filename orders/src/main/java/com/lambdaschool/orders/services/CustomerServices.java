@@ -6,11 +6,5 @@ import java.util.List;
 
 public interface CustomerServices
 {
-    List<Customer> findAllOrders();
-
-    Customer findCustomerById(long custid);
-
-    List<Customer> findCustomerByLikeName(String subname);
-
     Customer save(Customer customer);
 }

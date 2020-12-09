@@ -1,2 +1,5 @@
-package com.lambdaschool.orders.controllers;public class CustomerController {
+package com.lambdaschool.orders.controllers;
+
+public class CustomerController
+{
 }

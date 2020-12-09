@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Set;
+
 @RestController
 @RequestMapping("/orders")
 public class OrderController
@@ -27,7 +29,8 @@ public class OrderController
     @GetMapping(value = "/advanceamount", produces = "application/json")
     public ResponseEntity<?> getAdvanceAmount()
     {
-
-        return new ResponseEntity<>(null, HttpStatus.OK);
+        //List or Set? I would think Set so you don't have the chance of duplicate orders, but maybe that's unnessasary
+        Set<Order> orders = orderServices.getAdvances();
+        return new ResponseEntity<>(orders, HttpStatus.OK);
     }
 }
