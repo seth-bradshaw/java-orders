@@ -11,4 +11,8 @@ public interface OrderService
     Set<Order> getAdvances();
 
     Order save(Order order);
+
+    void deleteAllOrders();
+
+    void deleteOrder(long ordid);
 }

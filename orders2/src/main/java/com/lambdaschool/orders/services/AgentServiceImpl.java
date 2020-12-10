@@ -27,4 +27,10 @@ public class AgentServiceImpl implements AgentService
     {
         return agentrepos.save(agent);
     }
+
+    @Override
+    public void deleteAllAgents()
+    {
+        agentrepos.deleteAll();
+    }
 }

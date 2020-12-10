@@ -15,12 +15,12 @@ import org.springframework.web.bind.annotation.RestController;
 public class AgentController
 {
     @Autowired
-    AgentService agentServices;
+    AgentService agentService;
 
     @GetMapping(value = "/agent/{agentid}", produces = "application/json")
     public ResponseEntity<?> getAgentById(@PathVariable long agentid)
     {
-        Agent agent = agentServices.getById(agentid);
+        Agent agent = agentService.getById(agentid);
 
         return new ResponseEntity<>(agent, HttpStatus.OK);
     }

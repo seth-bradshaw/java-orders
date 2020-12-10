@@ -7,4 +7,6 @@ public interface AgentService
     Agent getById(long agentid);
 
     Agent save(Agent agent);
+
+    void deleteAllAgents();
 }
