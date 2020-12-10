@@ -9,4 +9,6 @@ public interface AgentService
     Agent save(Agent agent);
 
     void deleteAllAgents();
+
+    void deleteAgent(long agentcode) throws AgentCustomerException;
 }

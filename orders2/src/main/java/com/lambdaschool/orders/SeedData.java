@@ -150,6 +150,12 @@ public class SeedData
                 0.11,
                 "008-22536178",
                 "");
+        //Agent without customers for stretch
+        Agent a13 = new Agent("Snoop Dogg",
+                "LA, CA",
+                0.42,
+                "555-55555555",
+                "Merica");
 
         Customer c01 = new Customer("Holmes",
                 "London",
@@ -525,6 +531,7 @@ public class SeedData
         agentrepos.save(a10);
         agentrepos.save(a11);
         agentrepos.save(a12);
+        agentrepos.save(a13);
 
         custrepos.save(c01);
         custrepos.save(c02);
